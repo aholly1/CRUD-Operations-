@@ -104,14 +104,11 @@ router.delete("/:email", (req, res) => {
   res.send("Yet to be implemented")//This line is to be replaced with actual return value
 });
 
+//GET request: retrieves users with the same last name
 router.get(":/lastName", (req, res) => {
-
     const all_users_lastName = req.params.lastName;
-
     let names = users.filter((user) => user.lastName  === all_users_lastName);
-    
     res.send(names);
-
 })
 
 module.exports=router;
